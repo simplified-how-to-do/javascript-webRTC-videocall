@@ -1,0 +1,9 @@
+import React from 'react';
+import I{{pascalCase name}}Props from './types';
+import { Container } from './styles';
+
+const {{pascalCase name}}: React.FC<I{{pascalCase name}}Props> = ({ children, ...rest }) => {
+  return <Container {...rest}>{children}</Container>;
+};
+
+export default {{pascalCase name}};

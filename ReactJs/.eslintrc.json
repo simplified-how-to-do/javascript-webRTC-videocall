@@ -1,0 +1,59 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+    // "jest": true,
+    // "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+    // "import/resolver": {
+    //   "typescript": {}
+    // }
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks", "@typescript-eslint"],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off", // Prop types validate React property types, thing that typescript already do,
+    // "react/react-in-jsx-scope": "off", // Force the need to import React on each React file. If React is global, as on NextJs, its better to turn it off,
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "prettier/prettier": "warn",
+    "react/jsx-props-no-spreading": "off"
+    // "import/prefer-default-export": "off",
+    // // // Force types even when type is explicit.
+    // "@typescript-eslint/explicit-function-return-type": [
+    //   "error",
+    //   {
+    //     "allowExpressions": true
+    //   }
+    // ],
+    // "import/extensions": [
+    //   "error",
+    //   "ignorePackages",
+    //   {
+    //     "ts": "never",
+    //     "tsx": "never"
+    //   }
+    // ],
+    // // note you must disable the base rule as it can report incorrect errors
+    // "no-use-before-define": "off",
+    // "@typescript-eslint/no-use-before-define": ["error"]
+  }
+}
